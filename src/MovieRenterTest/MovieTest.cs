@@ -11,7 +11,7 @@ namespace MovieRenterTest
         {
             var movie = new Movie("movie", Movie.Regular);
 
-            Assert.Equals("movie", movie.Title);
+            Assert.Equal("movie", movie.Title);
         }
     }
 }
