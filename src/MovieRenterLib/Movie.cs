@@ -1,4 +1,4 @@
-namespace MovieRenter
+namespace MovieRenterLib
 {
     public class Movie
     {

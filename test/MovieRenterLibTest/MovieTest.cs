@@ -2,7 +2,7 @@ using System;
 using Xunit;
 using MovieRenter;
 
-namespace MovieRenterTest
+namespace MovieRenterLibTest
 {
     public class MovieTest
     {

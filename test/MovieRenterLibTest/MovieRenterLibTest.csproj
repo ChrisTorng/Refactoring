@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MovieRenter\MovieRenter.csproj" />
+    <ProjectReference Include="..\..\src\MovieRenterLib\MovieRenterLib.csproj" />
   </ItemGroup>
 
 </Project>
