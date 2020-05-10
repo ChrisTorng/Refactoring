@@ -28,7 +28,7 @@ namespace MovieRenterLib
 
             if (string.IsNullOrWhiteSpace(title))
             {
-                throw new ArgumentException("title is white space", nameof(title));
+                throw new ArgumentException("title is empty or white space", nameof(title));
             }
 
             if (!Enum.IsDefined(typeof(PriceTypeEnum), priceType))
