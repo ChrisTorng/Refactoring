@@ -1,3 +1,5 @@
+using System;
+
 namespace MovieRenterLib
 {
     public class Movie
@@ -19,6 +21,21 @@ namespace MovieRenterLib
 
         public Movie(string title, PriceTypeEnum priceType)
         {
+            if (title == null)
+            {
+                throw new ArgumentNullException(nameof(title));
+            }
+
+            if (string.IsNullOrWhiteSpace(title))
+            {
+                throw new ArgumentException("title is white space", nameof(title));
+            }
+
+            if (!Enum.IsDefined(typeof(PriceTypeEnum), priceType))
+            {
+                throw new ArgumentOutOfRangeException(nameof(priceType));
+            }
+
             this.Title = title;
             this.PriceType = priceType;
         }
