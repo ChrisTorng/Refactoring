@@ -25,6 +25,7 @@ namespace MovieRenterLibTest
                new Customer(name));
         }
 
+        [Fact]
         public void AddRental_Null_Test()
         {
             var customer = new Customer("customer");
