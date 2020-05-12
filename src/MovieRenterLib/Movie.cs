@@ -1,25 +1,25 @@
-using System;
+﻿using System;
 
 namespace MovieRenterLib
 {
     public class Movie
     {
-        public enum PriceTypeEnum
+        public enum PriceType
         {
             Regular,
             NewRelease,
-            Childrens
+            Childrens,
         }
 
-        public const PriceTypeEnum Regular = PriceTypeEnum.Regular;
-        public const PriceTypeEnum NewRelease = PriceTypeEnum.NewRelease;
-        public const PriceTypeEnum Childrens = PriceTypeEnum.Childrens;
+        public const PriceType Regular = PriceType.Regular;
+        public const PriceType NewRelease = PriceType.NewRelease;
+        public const PriceType Childrens = PriceType.Childrens;
 
         public string Title { get; }
 
-        public PriceTypeEnum PriceType { get; }
+        public PriceType CurrentPriceType { get; }
 
-        public Movie(string title, PriceTypeEnum priceType)
+        public Movie(string title, PriceType priceType)
         {
             if (title == null)
             {
@@ -31,13 +31,13 @@ namespace MovieRenterLib
                 throw new ArgumentException("title is empty or white space", nameof(title));
             }
 
-            if (!Enum.IsDefined(typeof(PriceTypeEnum), priceType))
+            if (!Enum.IsDefined(typeof(PriceType), priceType))
             {
                 throw new ArgumentOutOfRangeException(nameof(priceType));
             }
 
             this.Title = title;
-            this.PriceType = priceType;
+            this.CurrentPriceType = priceType;
         }
     }
 }

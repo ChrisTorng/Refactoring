@@ -1,6 +1,6 @@
-using System;
-using Xunit;
+﻿using System;
 using MovieRenterLib;
+using Xunit;
 
 namespace MovieRenterLibTest
 {
@@ -8,7 +8,7 @@ namespace MovieRenterLibTest
     {
         private static Movie defaultMovie = new Movie("movie", Movie.Regular);
 
-        public static TheoryData<Movie, int> validParameters =>
+        public static TheoryData<Movie, int> ValidParameters =>
             new TheoryData<Movie, int>
             {
                 { defaultMovie, 1 },
@@ -16,7 +16,7 @@ namespace MovieRenterLibTest
             };
 
         [Theory]
-        [MemberData(nameof(validParameters))]
+        [MemberData(nameof(ValidParameters))]
         public void Constructor_Properties_Test(
             Movie movie, int daysRented)
         {
@@ -26,7 +26,7 @@ namespace MovieRenterLibTest
             Assert.Equal(daysRented, rental.DaysRented);
         }
 
-        public static TheoryData<Movie, int, Type> invalidParameters =>
+        public static TheoryData<Movie, int, Type> InvalidParameters =>
             new TheoryData<Movie, int, Type>
             {
                 { null, 1, typeof(ArgumentNullException) },
@@ -35,7 +35,7 @@ namespace MovieRenterLibTest
             };
 
         [Theory]
-        [MemberData(nameof(invalidParameters))]
+        [MemberData(nameof(InvalidParameters))]
         public void Constructor_InvalidParameters_Test(
             Movie movie, int daysRented, Type exceptionType)
         {

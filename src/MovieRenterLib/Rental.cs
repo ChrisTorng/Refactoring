@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 
 namespace MovieRenterLib
 {
@@ -16,12 +16,12 @@ namespace MovieRenterLib
                 throw new ArgumentOutOfRangeException(nameof(daysRented));
             }
 
-            Movie = movie;
-            DaysRented = daysRented;
+            this.Movie = movie;
+            this.DaysRented = daysRented;
         }
 
         public Movie Movie { get; }
- 
+
         public int DaysRented { get; }
     }
 }

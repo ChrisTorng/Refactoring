@@ -1,11 +1,11 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace MovieRenterLib
 {
     public class Customer
     {
         private List<Rental> rentals;
-        
+
         public Customer(string name)
         {
             if (name == null)
@@ -17,7 +17,7 @@ namespace MovieRenterLib
             {
                 throw new System.ArgumentException("name is empty or white spaces", nameof(name));
             }
-            
+
             this.Name = name;
             this.rentals = new List<Rental>();
         }

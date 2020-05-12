@@ -1,6 +1,6 @@
-using System;
-using Xunit;
+﻿using System;
 using MovieRenterLib;
+using Xunit;
 
 namespace MovieRenterLibTest
 {
