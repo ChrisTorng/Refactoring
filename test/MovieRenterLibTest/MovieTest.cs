@@ -1,5 +1,5 @@
-using System;
 using Xunit;
+using System;
 using MovieRenterLib;
 
 namespace MovieRenterLibTest
